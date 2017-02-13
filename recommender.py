@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 
-# This helpful method will print the jokes for you
+# This helpful method will print the jokes
 def print_jokes(p, n_jokes):
     for i in range(N_clusters):
         print '\n------------------------------'
@@ -56,7 +56,7 @@ pickle.dump(d_user_user, userfile)
 pickle.dump(d_item_item, itemfile)
 
 # If the rating is 0, then the user has not rated that item
-# You can use this mask to select for rated or unrated jokes
+# Mask to select for rated or unrated jokes
 d_mask = (data_test == 0)
 
 print data_test.shape
